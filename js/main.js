@@ -18,9 +18,10 @@ require(['jquery','fullpage'], function($ , fullpage){
             slidesNavigation: false,
             slidesNavPosition: 'bottom',
             scrollingSpeed: "1500",
-            loopHorizontal: true,
-            loopBottom: true,
-            loopTop: true,
+            loopHorizontal: false,
+            loopBottom: false,
+            loopTop: false,
+            verticalCentered: false,
             onLeave: function(index, nextIndex, direction){
                 toogleBg($(this[0]));
                 
