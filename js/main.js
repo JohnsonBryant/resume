@@ -10,6 +10,7 @@ require.config({
 //调用
 require(['jquery','fullpage'], function($ , fullpage){
     $(function(){
+        var page = $("#fullpage");
         $('#fullpage').fullpage({
             menu: '#navBar',
             anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'lastPage'],
@@ -21,10 +22,43 @@ require(['jquery','fullpage'], function($ , fullpage){
             verticalCentered: false,
             onLeave: function(index, nextIndex, direction){
                 toogleBg($(this[0]));
-                
+                var nowPage = $(page.children()[nextIndex-1]);
+                if(nextIndex === 1){
+                    rmAnimate( nowPage, "shake swing");
+                    reStartAnimate( nowPage.find("h2.animated"), " shake", 400);
+                    reStartAnimate( nowPage.find("p.animated"), " swing", 500);
+                } else if (nextIndex === 2){
+                    rmAnimate( nowPage, "shake zoomIn");
+                    reStartAnimate( nowPage.find("h2.animated"), " shake", 400);
+                    reStartAnimate( nowPage.find("li.animated"), " zoomIn", 500);
+                } else if (nextIndex === 3){
+                    rmAnimate( nowPage, "shake slideInLeft slideInRight");
+                    reStartAnimate( nowPage.find("h2.animated"), " shake", 400);
+                    reStartAnimate( nowPage.find("ul.animated.rt"), "slideInRight", 500);
+                    reStartAnimate( nowPage.find("ul.animated.lt"), "slideInLeft", 500);
+                } else if (nextIndex === 4){
+                    rmAnimate( nowPage, "shake zoomIn");
+                    reStartAnimate( nowPage.find("h2.animated"), " shake", 400);
+                    reStartAnimate( nowPage.find("div.animated"), " zoomIn", 500);
+                } else if (nextIndex === 5){
+                    rmAnimate( nowPage, "shake tada");
+                    reStartAnimate( nowPage.find("h2.animated"), " shake", 1000);
+                    reStartAnimate( nowPage.find(".animated").not("h2"), " tada", 1000);
+                }
             },
+            afterLoad: function(anchorLink, index){
+                
+            }
         });
     })
+    function rmAnimate(el,expr){
+        el.find(".animated").removeClass(expr);
+    }
+    function reStartAnimate(el, expr, time){
+        setTimeout(function(){
+            el.addClass(expr);
+        },time)
+    }
     function toogleBg(el) {
         el.css({"transition":"all .7s"});
         setTimeout(function(){
