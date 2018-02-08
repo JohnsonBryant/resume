@@ -12,15 +12,12 @@ require(['jquery','fullpage'], function($ , fullpage){
     $(function(){
         $('#fullpage').fullpage({
             menu: '#navBar',
-            anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
-            navigation: true,
+            anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'lastPage'],
+            navigation: false,
             navigationPosition: 'left',
             slidesNavigation: false,
-            slidesNavPosition: 'bottom',
             scrollingSpeed: "1500",
             loopHorizontal: false,
-            loopBottom: false,
-            loopTop: false,
             verticalCentered: false,
             onLeave: function(index, nextIndex, direction){
                 toogleBg($(this[0]));

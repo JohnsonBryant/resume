@@ -17,6 +17,22 @@
     flex-flow: column;
     justify-content: center;
 }
+#navBar{
+    position: fixed;
+    left: 1rem;
+    top: 50%;
+    margin-top: -38px;
+}
+#navBar > li {
+    width: 10px;
+    height: 10px;
+    margin-bottom: 5px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,.5);
+}
+#navBar > li.active{
+    background-color: #fff;
+}
 .page {
     text-align: center;
     background-color: #4dd0e1;    
