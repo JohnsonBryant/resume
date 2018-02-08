@@ -88,6 +88,9 @@
     font-size: .7rem;    
     color: #bcf1f8;
 }
+.page2 ul.projects li:last-child{
+    display: none;
+}
 @media screen and (max-width: 400px){
     .page2 ul.projects{
         min-height: 60%;
@@ -104,6 +107,12 @@
         border: 1px solid #bcf1f8;
         border-radius: .2rem;
         transition: all .75s;
+    }
+    .page2 ul.projects li:nth-child(4),.page2 ul.projects li:nth-child(6){
+        display: none;
+    }
+    .page2 ul.projects li:last-child{
+        display: block;
     }
     .page2 ul.projects li>h4{
         font-size: .8rem;
@@ -155,13 +164,13 @@
     }
     .skill-wrap > ul{
         flex: 0 1 50%;
-        padding: 1.5rem 2rem 0 2rem;
+        padding: 1.5rem 0 0 2rem;
     }
     .skill-wrap > ul > li{
         font-size: .5rem;
         margin-bottom: .5em;
         text-align: left;
-        line-height: 1.25rem;
+        line-height: 1rem;
         transition: all .5s;
     }
     
@@ -206,4 +215,46 @@
     bottom: 1rem;
     left: 50%;
     margin-left: -6rem;
+}
+@media screen and (max-width: 400px){
+    .page5 {
+        position: relative;
+    }
+    .page5 .page-wrap > h2{
+        font-size: 2rem;
+        color: rgb(230,230,230);
+        margin-bottom: 2rem;
+    }
+    .page5 .page-wrap > dl{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .page5 .page-wrap > dl > dt{
+        flex: 0 1 43%;
+        text-align: right;
+        padding-right: .5rem;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+    }
+    .page5 .page-wrap > dl > dd{
+        flex: 0 1 57%;
+        text-align: left;
+        margin-top: .5rem;
+        margin-bottom: .5rem;      
+    }
+    .resume-profile a{
+        text-align: center;
+        margin-right: 1rem;
+        margin-left: .75rem;
+        transition: all .5s;
+    }
+    .resume-profile a:hover{
+        transform: scale(1.1);
+        box-shadow: 4px 4px 4px #666;
+    }
+    .send-me{
+        margin-left: -4rem;
+    }
 }
