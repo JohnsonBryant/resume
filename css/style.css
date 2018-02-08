@@ -91,6 +91,7 @@
 .page2 ul.projects li:last-child{
     display: none;
 }
+
 @media screen and (max-width: 400px){
     .page2 ul.projects{
         min-height: 60%;
