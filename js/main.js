@@ -67,6 +67,6 @@ require(['jquery','fullpage'], function($ , fullpage){
                 el.css({"transition":"no","background-color":"#4dd0e1"});
             },750);
         },50)
-    } 
-
+    }
+    alert(window.screen.width)
 });
