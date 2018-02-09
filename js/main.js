@@ -50,6 +50,8 @@ require(['jquery','fullpage'], function($ , fullpage){
                 
             }
         });
+        //弹出框
+        toggleModel( "#viewOnMobile", "#model");
     })
     function rmAnimate(el,expr){
         el.find(".animated").removeClass(expr);
@@ -68,5 +70,20 @@ require(['jquery','fullpage'], function($ , fullpage){
             },750);
         },50)
     }
-    alert(window.screen.width)
+    //定义弹出层函数，param: 必须为id选择器, controllerw为控制按钮，model 为定义的弹出框HTML结构模板 
+    function toggleModel( controller, model){
+        document.querySelector(controller).addEventListener( 'click', function(){
+            $(model).css({"display":"block","transform":"scale(.7)","opacity":".5"});
+            setTimeout(function(){
+                $(model).css({"transform":"scale(1)","opacity":"1"});
+            },100)
+        },false);
+        document.querySelector(model).addEventListener( 'click', function(){
+            $(model).css({"transform":"scale(.7)","opacity":".5"});
+            setTimeout(function(){
+                $(model).css({"display":"none"});
+            }, 1000)
+        },false)
+    }
+
 });
