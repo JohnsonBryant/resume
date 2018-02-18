@@ -1,3 +1,50 @@
+.loading-animate{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+}
+.loading-animate ul{
+    align-self: center;
+    height: 2rem;
+}
+.loading-animate ul li{
+    float: left;
+    margin: 0 0.2rem;
+    width: 0.6rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    background-color: #2378e6;
+}
+.loading-animate ul li:nth-child(1){
+    animation: loading-animate infinite 1.5s ease 0s;
+}
+.loading-animate ul li:nth-child(2){
+    animation: loading-animate infinite 1.5s ease .2s;
+}
+.loading-animate ul li:nth-child(3){
+    animation: loading-animate infinite 1.5s ease .4s;
+}
+.loading-animate ul li:nth-child(4){
+    animation: loading-animate infinite 1.5s ease .6s;
+}
+.loading-animate ul li:nth-child(5){
+    animation: loading-animate infinite 1.5s ease .8s;
+}
+@keyframes loading-animate {
+    50% {
+        transform: scale(1.5);
+        background: #66d3e2;
+    }
+    100% {
+        transform: scale(1);
+        background: #2378e6;
+    }
+}
+
 .btn-medium-default,.btn-medium-primary{
     display: inline-block;
     width: 120px;

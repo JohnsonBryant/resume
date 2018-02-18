@@ -10,6 +10,10 @@ require.config({
 //调用
 require(['jquery','fullpage'], function($ , fullpage){
     $(function(){
+        setTimeout(function() {
+            $('.loading-animate').fadeOut(1500);
+        }, 1000);
+
         var page = $("#fullpage");
         $('#fullpage').fullpage({
             menu: '#navBar',
