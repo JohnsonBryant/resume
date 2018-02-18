@@ -70,14 +70,15 @@
     top: 50%;
     margin-top: -38px;
 }
-#navBar > li {
+#navBar > li > a{
+    display: inline-block;
     width: 10px;
     height: 10px;
     margin-bottom: 5px;
     border-radius: 50%;
     background-color: rgba(255,255,255,.5);
 }
-#navBar > li.active{
+#navBar > li.active > a{
     background-color: #fff;
 }
 .page {
