@@ -20,19 +20,19 @@
     background-color: #2378e6;
 }
 .loading-animate ul li:nth-child(1){
-    animation: loading-animate infinite 1.5s ease 0s;
+    animation: loading-animate infinite 1s ease 0s;
 }
 .loading-animate ul li:nth-child(2){
-    animation: loading-animate infinite 1.5s ease .2s;
+    animation: loading-animate infinite 1s ease .2s;
 }
 .loading-animate ul li:nth-child(3){
-    animation: loading-animate infinite 1.5s ease .4s;
+    animation: loading-animate infinite 1s ease .4s;
 }
 .loading-animate ul li:nth-child(4){
-    animation: loading-animate infinite 1.5s ease .6s;
+    animation: loading-animate infinite 1s ease .6s;
 }
 .loading-animate ul li:nth-child(5){
-    animation: loading-animate infinite 1.5s ease .8s;
+    animation: loading-animate infinite 1s ease .8s;
 }
 @keyframes loading-animate {
     50% {
